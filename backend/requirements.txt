@@ -1,0 +1,40 @@
+# Web framework
+fastapi
+uvicorn[standard]
+python-multipart
+pydantic
+python-dotenv
+
+# Video / vision
+opencv-python
+mediapipe
+numpy<2
+
+# Deep learning
+torch
+torchvision
+
+# LLM correction
+transformers
+sentencepiece
+
+# Speech
+pyttsx3
+gTTS
+
+# Emotion
+# deepface
+# tf-keras
+
+# Database & auth
+sqlalchemy
+python-jose[cryptography]
+passlib[bcrypt]
+bcrypt<4.1
+
+# Notifications
+# twilio
+
+# Testing
+pytest
+httpx

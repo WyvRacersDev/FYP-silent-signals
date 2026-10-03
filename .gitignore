@@ -1,0 +1,24 @@
+# folders
+node_modules/
+dist/
+.vscode/
+
+# specific files
+.env
+.DS_Store
+npm-debug.log
+test.mp4
+test.py
+
+# by extension
+*.log
+*.tmp
+*.db
+*.pyc
+*.png
+
+# everything inside a folder except one file
+# backend/ml/models*
+# backend/ml/vendor*
+
+backend/test*
