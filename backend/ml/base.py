@@ -12,8 +12,17 @@ class TextCorrector(ABC):
     def correct(self, text: str) -> str: ...
 
 class TTSEngine(ABC):
+    media_type: str = "audio/wav"
+
     @abstractmethod
-    def speak(self, text: str) -> None: ...
+    def synthesize(self, text: str) -> bytes:
+        """Return encoded audio bytes for the text."""
+        ...
+
+    @abstractmethod
+    def speak(self, text: str) -> None:
+        """Play audio on the machine running the server."""
+        ...
 
 class EmotionDetector(ABC):
     @abstractmethod

@@ -22,6 +22,9 @@ from ml.corrector import DummyCorrector, PassthroughCorrector
 
 WEIGHTS = Path(__file__).resolve().parent.parent / "ml" / "models" / "lipnet_unseen.pt"
 
+from ml.tts import Pyttsx3Engine
+from services.speech_service import SpeechService
+
 class Container:
 
     def _seed_demo_user(self):   # <- and this method
@@ -47,7 +50,10 @@ class Container:
         self.corrector = PassthroughCorrector()
 
         self.emotion = DummyEmotion()
-        self.tts = ConsoleTTS()
+        # self.tts = ConsoleTTS()
+        self.tts = Pyttsx3Engine()
+        self.speech = SpeechService(self.tts) 
+
         self.notifier = ConsoleNotifier()
         # self.conv_repo = InMemoryConversationRepository()
         # self.user_repo = InMemoryUserRepository()
