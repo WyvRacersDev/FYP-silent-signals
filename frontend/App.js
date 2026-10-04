@@ -9,6 +9,8 @@ import LipReadScreen from './src/screens/LipReadScreen';
 import EmergencyScreen from './src/screens/EmergencyScreen';
 import HistoryScreen from './src/screens/HistoryScreen';
 import SettingsScreen from './src/screens/SettingsScreen';
+import SignLanguageScreen from './src/screens/SignLanguageScreen';
+import ProfileScreen from './src/screens/ProfileScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -51,6 +53,8 @@ function Root() {
         <Stack.Screen name="LipRead" component={LipReadScreen} options={{ title: 'Lip Reading' }} />
         <Stack.Screen name="Emergency" component={EmergencyScreen} options={{ title: 'Emergency' }} />
         <Stack.Screen name="History" component={HistoryScreen} options={{ title: 'History & Stats' }} />
+        <Stack.Screen name="SignLanguage" component={SignLanguageScreen} options={{ title: 'Sign Language' }} />
+        <Stack.Screen name="Profile" component={ProfileScreen} options={{ title: 'Profile' }} />
         <Stack.Screen name="Settings" component={SettingsScreen} options={{ title: 'Accessibility' }} />
       </Stack.Navigator>
     </NavigationContainer>

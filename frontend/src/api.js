@@ -35,3 +35,11 @@ export const sendEmergency = (message) =>
   });
 
 export const getHistory = () => request(`/history/${USER_ID}`, { timeout: 15000 });
+
+// ASSUMED endpoint: the backend has no sign-language route yet.
+export function signRead(videoUri) {
+  const form = new FormData();
+  form.append('video', { uri: videoUri, name: 'sign.mp4', type: 'video/mp4' });
+  form.append('user_id', String(USER_ID));
+  return request('/sign', { method: 'POST', body: form });
+}

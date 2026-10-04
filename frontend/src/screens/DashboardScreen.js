@@ -9,12 +9,11 @@ import { useSettings } from '../theme';
 const DRAWER_W = 290;
 
 const MENU = [
+  { title: 'Sign Language', icon: 'hand-left-outline', route: 'SignLanguage' },
   { title: 'Emergency', icon: 'alert-circle-outline', route: 'Emergency' },
   { title: 'History & Stats', icon: 'time-outline', route: 'History' },
+  { title: 'Profile', icon: 'person-circle-outline', route: 'Profile' },
   { title: 'Accessibility', icon: 'color-palette-outline', route: 'Settings' },
-  { title: 'Sign Language', icon: 'hand-left-outline' },
-  { title: 'Sound Optimizer', icon: 'volume-high-outline' },
-  { title: 'Profile', icon: 'person-circle-outline' },
 ];
 
 export default function DashboardScreen({ navigation }) {
