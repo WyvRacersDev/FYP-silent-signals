@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import {
-  View, Text, TouchableOpacity, TouchableWithoutFeedback, Animated, BackHandler, StyleSheet,
+  View, Text, TouchableOpacity, TouchableWithoutFeedback, Animated, BackHandler, StyleSheet, ScrollView,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -10,6 +10,8 @@ const DRAWER_W = 290;
 
 const MENU = [
   { title: 'Sign Language', icon: 'hand-left-outline', route: 'SignLanguage' },
+  { title: 'Text to Speech', icon: 'volume-high-outline', route: 'TextToSpeech' },
+  { title: 'Speech to Text', icon: 'mic-outline', route: 'SpeechToText' },
   { title: 'Emergency', icon: 'alert-circle-outline', route: 'Emergency' },
   { title: 'History & Stats', icon: 'time-outline', route: 'History' },
   { title: 'Profile', icon: 'person-circle-outline', route: 'Profile' },
@@ -150,6 +152,7 @@ export default function DashboardScreen({ navigation }) {
 
         <View style={{ height: 1, backgroundColor: colors.border, marginVertical: 16 }} />
 
+        <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={{ paddingBottom: insets.bottom + 20 }}>
         {MENU.map((m) => {
           const soon = !m.route;
           return (
@@ -169,6 +172,7 @@ export default function DashboardScreen({ navigation }) {
             </TouchableOpacity>
           );
         })}
+        </ScrollView>
       </Animated.View>
     </View>
   );

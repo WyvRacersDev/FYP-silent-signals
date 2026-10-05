@@ -43,3 +43,10 @@ export function signRead(videoUri) {
   form.append('user_id', String(USER_ID));
   return request('/sign', { method: 'POST', body: form });
 }
+
+// ASSUMED endpoint: needs backend/api/stt_router.py (provided with this update).
+export function transcribe(audioUri) {
+  const form = new FormData();
+  form.append('audio', { uri: audioUri, name: 'speech.m4a', type: 'audio/m4a' });
+  return request('/stt', { method: 'POST', body: form, timeout: 120000 });
+}

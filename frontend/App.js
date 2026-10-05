@@ -11,6 +11,8 @@ import HistoryScreen from './src/screens/HistoryScreen';
 import SettingsScreen from './src/screens/SettingsScreen';
 import SignLanguageScreen from './src/screens/SignLanguageScreen';
 import ProfileScreen from './src/screens/ProfileScreen';
+import TextToSpeechScreen from './src/screens/TextToSpeechScreen';
+import SpeechToTextScreen from './src/screens/SpeechToTextScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -54,6 +56,8 @@ function Root() {
         <Stack.Screen name="Emergency" component={EmergencyScreen} options={{ title: 'Emergency' }} />
         <Stack.Screen name="History" component={HistoryScreen} options={{ title: 'History & Stats' }} />
         <Stack.Screen name="SignLanguage" component={SignLanguageScreen} options={{ title: 'Sign Language' }} />
+        <Stack.Screen name="TextToSpeech" component={TextToSpeechScreen} options={{ title: 'Text to Speech' }} />
+        <Stack.Screen name="SpeechToText" component={SpeechToTextScreen} options={{ title: 'Speech to Text' }} />
         <Stack.Screen name="Profile" component={ProfileScreen} options={{ title: 'Profile' }} />
         <Stack.Screen name="Settings" component={SettingsScreen} options={{ title: 'Accessibility' }} />
       </Stack.Navigator>
